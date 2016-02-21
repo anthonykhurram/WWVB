@@ -1,4 +1,4 @@
-# Arduino Nano with Nokia LCD WWVB Transmitter for setting radio controlled 'Atomic Clocks' like Oergon Scientific, Baldr, Casio Wave Ceptor, Citizen etc. 
+## Arduino Nano with Nokia LCD WWVB Transmitter for setting radio controlled 'Atomic Clocks' like Oregon Scientific, Baldr, Casio Wave Ceptor, Citizen etc. 
 An Arduino based WWVB transmitter project.
 
 Tested successfully on a Baldr brand WWVB clock.

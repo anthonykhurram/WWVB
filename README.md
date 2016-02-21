@@ -2,6 +2,7 @@
 An Arduino based WWVB transmitter project. The point of this is to get sub second time accuracy on radio controlled clocks in countries that don't support it.
 
 ## Tested successfully on a Baldr brand WWVB clock so far.
+https://www.youtube.com/watch?v=lA-yf535rdY :Demo video of a radio controlled clock setting its time from the project.
 
 ## Not tested successfully on other devices as yet.
 

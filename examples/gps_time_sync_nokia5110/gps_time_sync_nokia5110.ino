@@ -119,7 +119,7 @@ SoftwareSerial ttl(10, 6);// Rx, Tx pin
 SoftwareSerial ttl(7, 6);// Rx, Tx pin
 #endif
 
-//#define GPS_MODULE 0 // ublox : Flash 16,812 bytes, SRAM 1299 bytes
+#define GPS_MODULE 0 // ublox : Flash 16,812 bytes, SRAM 1299 bytes
 //#define GPS_MODULE 1 // mediatek (default) : Flash 16,138 bytes, SRAM 1053 bytes
 
 #include <ATtinyGPS.h>
@@ -162,7 +162,7 @@ void setup()
 	gps.setup(ttl);
 
 	nokia5110.begin();
-	nokia5110.setContrast(38);
+	nokia5110.setContrast(50);
 	nokia5110.setTextSize(1);
 	nokia5110.setTextColor(BLACK);
 
@@ -278,28 +278,28 @@ void updateDisplay()
 	// line 3
 	nokia5110.println("");
 	// line 4
-	nokia5110.print("wwvb: ");
+	nokia5110.print("WWVB: ");
 	if (wwvb_tx.is_active())
 	{
-		nokia5110.print("     on");
+		nokia5110.print("Running");
 	}
 	else if (sync_gpstime)
 	{
-		nokia5110.print("syncing");
+		nokia5110.print("Syncing");
 	}
 	else
 	{
-		nokia5110.print("    off");
+		nokia5110.print("    Off");
 	}
 	// line 5
-	nokia5110.print("satellites:");
+	nokia5110.print("Satellites:");
 	if (gps.satellites < 10) { nokia5110.print(" "); }
 	nokia5110.print(gps.satellites);
 	// line 6
-	nokia5110.print("fix:");
+	nokia5110.print("Fix:");
 	if (gps.quality == 0)
 	{
-		nokia5110.print("  invalid");
+		nokia5110.print("  Invalid");
 	}
 	else
 	{
